@@ -1,6 +1,6 @@
+import requests
 import telebot
 from telebot import types
-
 import messages
 
 bot = telebot.TeleBot('7552255250:AAHr-ni4qgTD25kOxMLucdrOmaYWT_JW8vo')
@@ -28,6 +28,8 @@ def callback_check(callback):
         btnBack = types.InlineKeyboardButton("⬅ Назад", callback_data="backmenu")
         markup = types.InlineKeyboardMarkup()
         markup.add(btnDX1, btnDX3, btnDX12, btnBack)
+        with open('images/Delux.jpg', 'rb') as file:
+            bot.edit_message_media(chat_id=callback.message.chat.id, message_id=callback.message.id, media=types.InputMediaPhoto(file))
         bot.edit_message_caption(chat_id=callback.message.chat.id, message_id=callback.message.id,
                               caption=messages.answer_delux,
                               reply_markup=markup, parse_mode='html')  # Текст сообщения
@@ -39,6 +41,8 @@ def callback_check(callback):
         btnBack = types.InlineKeyboardButton("⬅ Назад", callback_data="backmenu")
         markup = types.InlineKeyboardMarkup()
         markup.add(btnDX1, btnDX3, btnDX12, btnBack)
+        with open('images/Extra.jpg', 'rb') as file:
+            bot.edit_message_media(chat_id=callback.message.chat.id, message_id=callback.message.id, media=types.InputMediaPhoto(file))
         bot.edit_message_caption(chat_id=callback.message.chat.id, message_id=callback.message.id,
                               caption=messages.answer_extra,
                               reply_markup=markup, parse_mode='html')  # Текст сообщения
@@ -50,6 +54,8 @@ def callback_check(callback):
         btnBack = types.InlineKeyboardButton("⬅ Назад", callback_data="backmenu")
         markup = types.InlineKeyboardMarkup()
         markup.add(btnDX1, btnDX3, btnDX12, btnBack)
+        with open('images/Essen.jpg', 'rb') as file:
+            bot.edit_message_media(chat_id=callback.message.chat.id, message_id=callback.message.id, media=types.InputMediaPhoto(file))
         bot.edit_message_caption(chat_id=callback.message.chat.id, message_id=callback.message.id,
                               caption=messages.answer_essen,
                               reply_markup=markup, parse_mode='html')  # Текст сообщения
@@ -159,6 +165,8 @@ def callback_check(callback):
         btn3 = types.InlineKeyboardButton("⚪ ESSENTIAL ⚪", callback_data="essen")
         btn4 = types.InlineKeyboardButton("🔹 EA PLAY 🔹", callback_data="eplay")
         markup.add(btn1, btn2, btn3, btn4)  # Добавляем кнопки под сообщение
+        with open('images/Mordo.jpg', 'rb') as file:
+            bot.edit_message_media(chat_id=callback.message.chat.id, message_id=callback.message.id, media=types.InputMediaPhoto(file))
         bot.edit_message_caption(chat_id=callback.message.chat.id, message_id=callback.message.id,
                               caption=messages.start_message,
                               reply_markup=markup, parse_mode='html')  # Текст сообщения

@@ -155,12 +155,12 @@ time_eplay_12_month = '''💎 Вы выбрали подписку: 🔹 <em>Pla
 #---ССЫЛКИ---
 
 
-start_img = "images/Mordo.jpg"
+start_img = "https://i.imgur.com/1icul0a.jpeg"
 
-delux_img = "images/Delux.jpg"
+delux_img = "https://i.imgur.com/4Lvfcbe.jpeg"
 
-extra_img = "images/Extra.jpg"
+extra_img = "https://i.imgur.com/p9brRXj.jpeg"
 
-essen_img = "images/Essen.jpg"
+essen_img = "https://i.imgur.com/SxphcP8.jpeg"
 
 eplay_img = "images/"
